@@ -1,0 +1,141 @@
+package com.example.demo.model;
+
+import java.sql.Date;
+
+/*import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;*/
+import org.springframework.data.annotation.Id;
+
+//@Entity
+public class Subscriber {
+	
+	@Id
+	//@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int subscriber_id; 
+	private String subscriber_display_name;
+	private String subscriber_name;
+	private String subscriber_email; 
+	private String subscriber_profile; 
+	private String username;
+	private String password;
+	private int account_status;
+	private Date date_joined; 
+	private Date date_approved;
+	
+	public Subscriber(int subscriber_id, String subscriber_display_name, String subscriber_name,
+			String subscriber_email, String subscriber_profile, String username, String password, int account_status,
+			Date date_joined, Date date_approved) {
+		super();
+		this.subscriber_id = subscriber_id;
+		this.subscriber_display_name = subscriber_display_name;
+		this.subscriber_name = subscriber_name;
+		this.subscriber_email = subscriber_email;
+		this.subscriber_profile = subscriber_profile;
+		this.username = username;
+		this.password = password;
+		this.account_status = account_status;
+		this.date_joined = date_joined;
+		this.date_approved = date_approved;
+	}
+
+	public int getSubscriber_id() {
+		return subscriber_id;
+	}
+
+	public void setSubscriber_id(int subscriber_id) {
+		this.subscriber_id = subscriber_id;
+	}
+
+	public String getSubscriber_display_name() {
+		return subscriber_display_name;
+	}
+
+	public void setSubscriber_display_name(String subscriber_display_name) {
+		this.subscriber_display_name = subscriber_display_name;
+	}
+
+	public String getSubscriber_name() {
+		return subscriber_name;
+	}
+
+	public void setSubscriber_name(String subscriber_name) {
+		this.subscriber_name = subscriber_name;
+	}
+
+	public String getSubscriber_email() {
+		return subscriber_email;
+	}
+
+	public void setSubscriber_email(String subscriber_email) {
+		this.subscriber_email = subscriber_email;
+	}
+
+	public String getSubscriber_profile() {
+		return subscriber_profile;
+	}
+
+	public void setSubscriber_profile(String subscriber_profile) {
+		this.subscriber_profile = subscriber_profile;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public int getAccount_status() {
+		return account_status;
+	}
+
+	public void setAccount_status(int account_status) {
+		this.account_status = account_status;
+	}
+
+	public Date getDate_joined() {
+		return date_joined;
+	}
+
+	public void setDate_joined(Date date_joined) {
+		this.date_joined = date_joined;
+	}
+
+	public Date getDate_approved() {
+		return date_approved;
+	}
+
+	public void setDate_approved(Date date_approved) {
+		this.date_approved = date_approved;
+	}
+
+	@Override
+	public String toString() {
+		return "Subscriber [subscriber_id=" + subscriber_id + ", subscriber_display_name=" + subscriber_display_name
+				+ ", subscriber_name=" + subscriber_name + ", subscriber_email=" + subscriber_email
+				+ ", subscriber_profile=" + subscriber_profile + ", username=" + username + ", password=" + password
+				+ ", account_status=" + account_status + ", date_joined=" + date_joined + ", date_approved="
+				+ date_approved + "]";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="org.springframework.data.annotation.Id"/>
+    <fullyQualifiedTypeName name="org.springframework.data.mongodb.repository.MongoRepository"/>
+    <fullyQualifiedTypeName name="org.yaml.snakeyaml.events.Event.ID"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+    <fullyQualifiedTypeName name="org.springframework.data.mongodb.core.aggregation.ArrayOperators.In"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.domain.EntityScan"/>
+    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.example.demo.model.News"/>
+    <fullyQualifiedTypeName name="com.example.demo.repository.NewsRepository"/>
+    <fullyQualifiedTypeName name="com.example.demo.service.NewsService"/>
+    <fullyQualifiedTypeName name="com.example.demo.repository.AuthorRepository"/>
+    <fullyQualifiedTypeName name="com.example.demo.service.AuthorService"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="com.example.demo.repository.CommentRepository"/>
+    <fullyQualifiedTypeName name="com.example.demo.service.CommentService"/>
+    <fullyQualifiedTypeName name="javax.activation.CommandMap"/>
+    <fullyQualifiedTypeName name="com.example.demo.repository.SubscriberRepository"/>
+    <fullyQualifiedTypeName name="com.example.demo.service.SubscribeService"/>
+    <fullyQualifiedTypeName name="com.example.demo.repository.CategoryRepository"/>
+    <fullyQualifiedTypeName name="com.example.demo.service.CategoryService"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
+    <fullyQualifiedTypeName name="com.example.demo.model.Author"/>
+    <fullyQualifiedTypeName name="com.example.demo.model.Category"/>
+    <fullyQualifiedTypeName name="com.example.demo.model.Comment"/>
+    <fullyQualifiedTypeName name="com.example.demo.model.Subscriber"/>
+</qualifiedTypeNameHistroy>

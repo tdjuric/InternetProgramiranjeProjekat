@@ -1,0 +1,128 @@
+package com.example.demo.model;
+
+import java.sql.Date;
+
+import javax.persistence.ManyToOne;
+
+/*import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;*/
+import org.springframework.data.annotation.Id;
+
+//@Entity
+public class News {
+	@Id
+	//@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int news_id;
+	@ManyToOne
+	private Category category;
+	private int category_id;
+    private Date date_posted; 
+	private String news_title;
+	private String news_content;
+	private Date date_updated; 
+	private int news_status;
+	private boolean comment_status;
+	
+	public News(int news_id, int category_id, Date date_posted, String news_title, String news_content,
+			Date date_updated, int news_status, boolean comment_status) {
+		super();
+		this.news_id = news_id;
+		this.category_id = category_id;
+		this.date_posted = date_posted;
+		this.news_title = news_title;
+		this.news_content = news_content;
+		this.date_updated = date_updated;
+		this.news_status = news_status;
+		this.comment_status = comment_status;
+	}
+
+	public int getNews_id() {
+		return news_id;
+	}
+
+
+	public void setNews_id(int news_id) {
+		this.news_id = news_id;
+	}
+
+
+	public int getCategory_id() {
+		return category_id;
+	}
+
+
+	public void setCategory_id(int category_id) {
+		this.category_id = category_id;
+	}
+
+
+	public Date getDate_posted() {
+		return date_posted;
+	}
+
+
+	public void setDate_posted(Date date_posted) {
+		this.date_posted = date_posted;
+	}
+
+
+	public String getNews_title() {
+		return news_title;
+	}
+
+
+	public void setNews_title(String news_title) {
+		this.news_title = news_title;
+	}
+
+
+	public String getNews_content() {
+		return news_content;
+	}
+
+
+	public void setNews_content(String news_content) {
+		this.news_content = news_content;
+	}
+
+
+	public Date getDate_updated() {
+		return date_updated;
+	}
+
+
+	public void setDate_updated(Date date_updated) {
+		this.date_updated = date_updated;
+	}
+
+
+	public int getNews_status() {
+		return news_status;
+	}
+
+
+	public void setNews_status(int news_status) {
+		this.news_status = news_status;
+	}
+
+
+	public boolean isComment_status() {
+		return comment_status;
+	}
+
+
+	public void setComment_status(boolean comment_status) {
+		this.comment_status = comment_status;
+	}
+
+	@Override
+	public String toString() {
+		return "News [news_id=" + news_id + ", category_id=" + category_id + ", date_posted=" + date_posted
+				+ ", news_title=" + news_title + ", news_content=" + news_content + ", date_updated=" + date_updated
+				+ ", news_status=" + news_status + ", comment_status=" + comment_status + "]";
+	}
+	
+
+}

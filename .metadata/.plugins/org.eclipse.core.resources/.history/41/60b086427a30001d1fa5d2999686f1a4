@@ -1,0 +1,104 @@
+package com.example.demo.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.aspectj.apache.bcel.generic.RET;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.example.demo.model.Author;
+import com.example.demo.repository.AuthorRepository;
+
+
+@Service
+public class AuthorService implements UserService<Author>{
+	
+	@Autowired
+	AuthorRepository authorRepository;
+	
+	public AuthorService() {
+	}
+
+	public List<Author> getAllAuthors() {
+		return this.authorRepository.findAll();
+	}
+	
+	public Optional<Author> getAuthorById(String author_id) {
+		return this.authorRepository.findById(author_id);
+	}
+
+	public void addAuthor(Author author) {
+		this.authorRepository.save(author);
+	}
+	
+	public boolean logInAuthor(Author author) {
+		List<Author> authors = this.authorRepository.findByAuthor_email(author.getEmail());
+		if(authors.size() == 1) {
+			if(author.getPassword().equals(authors.get(0).getPassword())){
+				return true;
+			}
+		}
+			return false;
+	}
+	
+	public void signUpAuthor(Author author) {
+		List<Author> authors = this.authorRepository.findByAuthor_email(author.getEmail());
+		if(authors.isEmpty())
+			this.authorRepository.save(author);
+	}
+	
+	public void updateAuthor(Author author) {
+		this.authorRepository.save(author);
+	}
+
+	public void deleteAuthorById(String id) {
+		this.authorRepository.deleteById(id);	
+	}
+	
+	public void deleteAuthors(Author author) {
+		this.authorRepository.delete(author);	
+	}
+
+	@Override
+	public Author addUser(String name, String username, String email, String password) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int deleteUser(String id) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Optional<Author> getUser(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getUserIdByEmail(String email) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Optional<Author> getUserByEmail(String email) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Author> getUsers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean passwordMatch(String id, String password) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+}

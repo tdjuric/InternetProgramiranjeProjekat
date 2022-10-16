@@ -1,0 +1,22 @@
+package com.example.demo.model;
+
+import java.sql.Date;
+
+/*import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;*/
+import org.springframework.data.annotation.Id;
+
+
+//@Document(collation = "subscriber")
+public class Subscriber extends User {
+	
+	 public Subscriber() {
+	        this.setType("subscriber");
+	    }
+	    public Subscriber(String name, String username, String email, String password){
+	        super(name, username, email, password);
+	        this.setType("subscriber");
+	    }
+}
